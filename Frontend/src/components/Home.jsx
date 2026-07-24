@@ -1,3 +1,8 @@
+// ============================================================
+// DAY 2 — COMMIT 22: Home page - product grid
+// DAY 2 — COMMIT 23: Image fetching logic for product cards
+// DAY 3 — COMMIT 35: Restyle handled in App.css (.grid / .card)
+// ============================================================
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -16,9 +21,34 @@ const Home = ({ selectedCategory }) => {
     }
   }, [refreshData, isDataFetched]);
 
-  // --- product grid rendering directly from context data ---
+  // --- COMMIT 23: fetch product images and attach to product objects ---
   useEffect(() => {
-    setProducts(data);
+    if (data && data.length > 0) {
+      const fetchImagesAndUpdateProducts = async () => {
+        const updatedProducts = await Promise.all(
+          data.map(async (product) => {
+            try {
+              const response = await axios.get(
+                `http://localhost:8080/api/product/${product.id}/image`,
+                { responseType: "blob" }
+              );
+              const imageUrl = URL.createObjectURL(response.data);
+              return { ...product, imageUrl };
+            } catch (error) {
+              console.error(
+                "Error fetching image for product ID:",
+                product.id,
+                error
+              );
+              return { ...product, imageUrl: "placeholder-image-url" };
+            }
+          })
+        );
+        setProducts(updatedProducts);
+      };
+
+      fetchImagesAndUpdateProducts();
+    }
   }, [data]);
 
   const filteredProducts = selectedCategory
