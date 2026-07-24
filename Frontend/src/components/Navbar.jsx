@@ -180,6 +180,44 @@ const Navbar = ({ onSelectCategory, onSearch }) => {
                     Cart
                   </i>
                 </a>
+                {/* --- COMMIT 21: live search input + results --- */}
+                {/* <form className="d-flex" role="search" onSubmit={handleSearch} id="searchForm"> */}
+                <input
+                  className="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                  value={input}
+                  onChange={(e) => handleChange(e.target.value)}
+                  onFocus={() => setSearchFocused(true)} // Set searchFocused to true when search bar is focused
+                  onBlur={() => setSearchFocused(false)} // Set searchFocused to false when search bar loses focus
+                />
+                {showSearchResults && (
+                  <ul className="list-group">
+                    {searchResults.length > 0 ? (  
+                        searchResults.map((result) => (
+                          <li key={result.id} className="list-group-item">
+                            <a href={`/product/${result.id}`} className="search-result-link">
+                            <span>{result.name}</span>
+                            </a>
+                          </li>
+                        ))
+                    ) : (
+                      noResults && (
+                        <p className="no-results-message">
+                          No Prouduct with such Name
+                        </p>
+                      )
+                    )}
+                  </ul>
+                )}
+                {/* <button
+                  className="btn btn-outline-success"
+                  onClick={handleSearch}
+                >
+                  Search Products
+                </button> */}
+                {/* </form> */}
                 <div />
               </div>
             </div>
