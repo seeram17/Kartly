@@ -55,6 +55,10 @@ const Product = () => {
     navigate(`/product/update/${id}`);
   };
 
+  const handlAddToCart = () => {
+    addToCart(product);
+    alert("Product added to cart");
+  };
   if (!product) {
     return (
       <h2 className="text-center" style={{ padding: "10rem" }}>
@@ -98,6 +102,25 @@ const Product = () => {
             <span style={{ fontSize: "2rem", fontWeight: "bold" }}>
               {"$" + product.price}
             </span>
+            <button
+              className={`cart-btn ${
+                !product.available ? "disabled-btn" : ""
+              }`}
+              onClick={handlAddToCart}
+              disabled={!product.available}
+              style={{
+                padding: "1rem 2rem",
+                fontSize: "1rem",
+                backgroundColor: "#007bff",
+                color: "white",
+                border: "none",
+                borderRadius: "5px",
+                cursor: product.available ? "pointer" : "not-allowed",
+                marginBottom: "1rem",
+              }}
+            >
+              {product.available ? "Add to cart" : "Out of Stock"}
+            </button>
             <h6 style={{ marginBottom: "1rem" }}>
               Stock Available :{" "}
               <i style={{ color: "green", fontWeight: "bold" }}>
