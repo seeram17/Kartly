@@ -1,0 +1,10 @@
+/* ============================================================
+   DAY 2 — COMMIT 16: base Vite/React scaffold reset
+   DAY 3 — COMMIT 32/33: removed old conflicting theme values
+            here (they clashed with App.css's --root_background,
+            which is now the single source of truth for theme vars)
+   ============================================================ */
+html, body {
+  margin: 0;
+  padding: 0;
+}
