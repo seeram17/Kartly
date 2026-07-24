@@ -51,4 +51,16 @@ public class ProductController {
         }
     }
 
+    @GetMapping("/product/{productId}/image")
+    public ResponseEntity<byte []> getProductImageById(@PathVariable int productId){
+
+        Product product = service.getProductById(productId) ;
+
+        byte[] imageData = product.getImageData() ;
+
+        return ResponseEntity.ok().contentType(MediaType.valueOf(product.getImageType())).body(imageData);
+
+
+    }
+
 }
