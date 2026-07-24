@@ -39,4 +39,16 @@ public class ProductController {
         return new ResponseEntity<>(service.getProductById(id),HttpStatus.OK);
     }
 
+    @PostMapping("/product")
+    public ResponseEntity<?> addProduct(@RequestPart Product product, @RequestPart MultipartFile imageFile) {
+
+        try {
+            Product prod = service.addProduct(product, imageFile);
+            return new ResponseEntity<>(prod, HttpStatus.CREATED);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
 }
