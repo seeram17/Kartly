@@ -40,4 +40,10 @@ public class ProductService {
 
         repo.save(product);
     }
+
+    public void deleteProduct(int id) {
+
+        repo.deleteById(id);
+
+    }
 }

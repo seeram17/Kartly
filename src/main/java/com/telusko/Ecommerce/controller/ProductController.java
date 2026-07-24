@@ -74,4 +74,12 @@ public class ProductController {
         }
     }
 
+    @DeleteMapping("/product/{id}")
+    public ResponseEntity<String> deleteProduct(@PathVariable int id){
+
+        service.deleteProduct(id) ;
+
+        return new ResponseEntity<>("Deleted",HttpStatus.OK);
+    }
+
 }
