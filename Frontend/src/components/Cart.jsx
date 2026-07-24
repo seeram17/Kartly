@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+// import React, { useContext, useState, useEffect } from "react";
 // // import axios from '../axios';
 // import AppContext from "../Context/Context";
 // import axios from "axios";
@@ -313,6 +313,14 @@ const Cart = () => {
     }
   }, [cart]);
 
+  // --- COMMIT 29: recalculate cart total whenever items change ---
+  useEffect(() => {
+    const total = cartItems.reduce(
+      (acc, item) => acc + item.price * item.quantity,
+      0
+    );
+    setTotalPrice(total);
+  }, [cartItems]);
 
   const converUrlToFile = async (blobData, fileName) => {
     const file = new File([blobData], fileName, { type: blobData.type });
