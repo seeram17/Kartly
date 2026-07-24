@@ -29,4 +29,15 @@ public class ProductService {
 
         return product ;
     }
+
+    public void updateProduct(int id, Product product, MultipartFile imageFile) throws IOException {
+
+        product.setId(id);
+
+        product.setImageName(imageFile.getOriginalFilename());
+        product.setImageType(imageFile.getContentType());
+        product.setImageData(imageFile.getBytes());
+
+        repo.save(product);
+    }
 }
