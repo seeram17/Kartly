@@ -305,3 +305,59 @@ a:hover {
 }
 
 /* ============================ Buttons ============================ */
+/* --- COMMIT 35 / 39: shared by product cards (Add to Cart) and forms (submit buttons) --- */
+.btn-primary {
+  background-color: var(--accent) !important;
+  border-color: var(--accent) !important;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 1rem;
+}
+.btn-primary:hover {
+  background-color: var(--accent-hover) !important;
+  border-color: var(--accent-hover) !important;
+}
+
+.btn-outline-success {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.btn-outline-success:hover {
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+.btn-hover {
+  width: 150px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px;
+  height: 42px;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--accent);
+  transition: background-color 0.25s ease, transform 0.15s ease;
+}
+.btn-hover:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-1px);
+}
+.btn-hover:focus {
+  outline: none;
+}
+.btn-hover:disabled {
+  background-color: var(--border-color);
+  color: var(--muted-text);
+  cursor: not-allowed;
+  transform: none;
+}
+.btn-hover.color-9 {
+  background-color: var(--accent);
+  box-shadow: none;
+}
+
+/* ============================ Product Detail Page ============================ */
