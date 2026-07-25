@@ -108,3 +108,116 @@ a:hover {
   color: var(--link_hover_color);
 }
 
+/* ============================ Navbar ============================ */
+/* --- COMMIT 34 --- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--navbar_background);
+  border-bottom: 1px solid var(--border-color);
+  padding: 12px 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+
+.navbar a, .navbar span, .navbar li, .navbar i, .navbar button {
+  color: var(--navbar_text) !important;
+}
+
+.navbar a:hover {
+  color: var(--link_hover_color) !important;
+}
+
+.text-center {
+  color: var(--navbar_text) !important;
+}
+
+.theme-btn {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: inherit;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  transition: background-color 0.2s ease;
+}
+.theme-btn:hover {
+  background-color: var(--category-hvr);
+}
+
+.cart {
+  position: relative;
+}
+
+/* Search dropdown */
+.list-group {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: calc(100% - 1rem);
+  background-color: var(--search_result-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.list-group-item {
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  background-color: var(--search_result-bg) !important;
+  color: var(--para-clr);
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+}
+.list-group-item:last-child {
+  border-bottom: none;
+}
+.list-group-item:hover {
+  background-color: var(--category-hvr);
+}
+
+.no-results-message {
+  margin-top: 0.5rem;
+  color: var(--danger);
+  display: flex;
+  justify-content: center;
+}
+
+.search-result-link {
+  text-decoration: none;
+  color: inherit;
+}
+.search-result-link:hover {
+  text-decoration: underline;
+}
+
+/* Category dropdown */
+.dropdown-item {
+  color: var(--para-clr) !important;
+}
+.dropdown-menu {
+  background-color: var(--card-bg-clr) !important;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+.dropdown-item:hover {
+  color: var(--para-clr);
+  background-color: var(--category-hvr) !important;
+}
+
+/* ============================ Product Grid / Cards ============================ */
