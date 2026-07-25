@@ -622,3 +622,17 @@ a:hover {
 }
 
 /* ============================ Checkout Popup ============================ */
+/* --- COMMIT 40 --- */
+.checkoutPopup {
+  background-color: var(--body_background) !important;
+}
+.checkout-items {
+  display: flex;
+  flex-direction: column;
+}
+.checkout-item p {
+  color: var(--para-clr);
+  margin: 2px 0;
+}
+
+/* ============================ Update Product ============================ */
