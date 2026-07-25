@@ -1,0 +1,48 @@
+/* =========================================================
+   Kartly — App Stylesheet
+   Simple, muted color palette. Light / dark theme via CSS vars.
+
+   Commit map (Day 3 — redesign & polish):
+   COMMIT 32 -> .light-theme variables (below)
+   COMMIT 33 -> .dark-theme variables
+   COMMIT 34 -> Navbar / search / dropdown section
+   COMMIT 35 -> Product Grid / Cards section
+   COMMIT 36 -> Product Detail Page section
+   COMMIT 38 -> Cart section
+   COMMIT 39 -> Forms / .center-container (Add & Update Product)
+   COMMIT 40 -> Checkout Popup section
+   COMMIT 41 -> Hover states / transitions (spread across sections)
+   COMMIT 42 -> Responsive @media blocks (Cart + Product Detail)
+   COMMIT 43 -> Dead CSS removed (blob buttons, unused like/delete)
+   ========================================================= */
+
+/* --- COMMIT 32: light theme palette --- */
+.light-theme {
+  --root_background: #f5f6f8;
+  --body_background: #f5f6f8;
+  --navbar_background: #ffffff;
+  --navbar_text: #232830;
+  --body_color: #f5f6f8;
+  --link_color: #232830;
+  --link_hover_color: #3d6b8a;
+  --link_visited_color: #3d6b8a;
+  --para-clr: #2b2f36;
+  --muted-text: #6b7280;
+  --cart_body_color: #ffffff;
+  --quantity-clr: #2b2f36;
+  --button-clr: #2b2f36;
+  --card-bg-clr: #ffffff;
+  --btn-bg: #3d6b8a;
+  --btn-clr: #ffffff;
+  --category-hvr: #eef1f4;
+  --search_result-bg: #ffffff;
+  --hr_line_card: #e3e6ea;
+  --border-color: #e3e6ea;
+  --accent: #3d6b8a;
+  --accent-hover: #32586f;
+  --accent-soft: #eaf1f5;
+  --danger: #b3453f;
+  --danger-hover: #973a35;
+  --success: #3f8f5f;
+}
+
