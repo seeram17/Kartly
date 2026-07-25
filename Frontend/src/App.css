@@ -46,3 +46,32 @@
   --success: #3f8f5f;
 }
 
+/* --- COMMIT 33: dark theme palette --- */
+.dark-theme {
+  --root_background: #16181c;
+  --body_background: #16181c;
+  --navbar_background: #1c1f24;
+  --navbar_text: #e6e8eb;
+  --body_color: #16181c;
+  --link_color: #e6e8eb;
+  --link_hover_color: #7fa8c9;
+  --link_visited_color: #7fa8c9;
+  --para-clr: #e6e8eb;
+  --muted-text: #9aa3af;
+  --cart_body_color: #1c1f24;
+  --quantity-clr: #e6e8eb;
+  --button-clr: #e6e8eb;
+  --card-bg-clr: #1e2126;
+  --btn-bg: #4d84a8;
+  --btn-clr: #ffffff;
+  --category-hvr: #262a30;
+  --search_result-bg: #1e2126;
+  --hr_line_card: #2b2f36;
+  --border-color: #2b2f36;
+  --accent: #4d84a8;
+  --accent-hover: #5f97ba;
+  --accent-soft: #202730;
+  --danger: #c65950;
+  --danger-hover: #d76a61;
+  --success: #56a878;
+}
