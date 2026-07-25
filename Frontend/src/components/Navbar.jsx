@@ -1,3 +1,8 @@
+// ============================================================
+// DAY 2 — COMMIT 20: Navbar base layout + category dropdown
+// DAY 2 — COMMIT 21: Live search (search input + results dropdown)
+// DAY 3 — COMMIT 31: Rebrand Telusko -> Kartly (brand link below)
+// ============================================================
 import React, { useEffect, useState } from "react";
 import Home from "./Home"
 import axios from "axios";
@@ -107,8 +112,8 @@ const Navbar = ({ onSelectCategory, onSearch }) => {
       <header>
         <nav className="navbar navbar-expand-lg fixed-top">
           <div className="container-fluid">
-            <a className="navbar-brand" href="https://telusko.com/">
-              Telusko
+            <a className="navbar-brand" href="/">
+              Kartly
             </a>
             <button
               className="navbar-toggler"
