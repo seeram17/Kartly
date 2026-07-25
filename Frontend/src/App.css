@@ -221,3 +221,87 @@ a:hover {
 }
 
 /* ============================ Product Grid / Cards ============================ */
+/* --- COMMIT 35 --- */
+.grid {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  padding: 24px;
+  padding-top: 100px;
+  background: var(--body_background);
+}
+
+.card {
+  border-radius: 10px;
+  background-color: var(--card-bg-clr) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+.card h5, .card h3, .card i {
+  color: var(--para-clr) !important;
+}
+
+.card-brand {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--muted-text);
+}
+
+.container {
+  background-color: var(--body_background) !important;
+  color: var(--body_color) !important;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+}
+
+.center-container {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  color: var(--para-clr);
+  background-color: var(--card-bg-clr) !important;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 90px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.center-container .image-control {
+  display: block;
+  margin: 0 auto;
+  padding-top: 2rem;
+  background-color: var(--body_background);
+}
+
+.form-label h6 {
+  font-weight: 600;
+  color: var(--para-clr);
+  margin-bottom: 0.3rem;
+}
+
+.form-control, .form-select {
+  background-color: var(--body_background);
+  color: var(--para-clr);
+  border: 1px solid var(--border-color);
+}
+.form-control:focus, .form-select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 0.2rem var(--accent-soft);
+  background-color: var(--body_background);
+  color: var(--para-clr);
+}
+
+/* ============================ Buttons ============================ */
