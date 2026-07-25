@@ -75,3 +75,36 @@
   --danger-hover: #d76a61;
   --success: #56a878;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--body_background);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#root {
+  max-width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: var(--root_background) !important;
+}
+
+/* ============================ Typography ============================ */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--para-clr);
+}
+p {
+  color: var(--para-clr);
+}
+a {
+  color: var(--link_color);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--link_hover_color);
+}
+
