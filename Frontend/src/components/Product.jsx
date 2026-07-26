@@ -1,3 +1,9 @@
+// ============================================================
+// DAY 2 — COMMIT 24: Product detail page - fetch + render product
+// DAY 2 — COMMIT 25: Add to Cart logic (handlAddToCart below)
+// DAY 3 — COMMIT 37: Muted colors for Add to Cart/Update/Delete
+//                     buttons (inline styles further down)
+// ============================================================
 import { useNavigate, useParams } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import { useState } from "react";
@@ -111,7 +117,7 @@ const Product = () => {
               style={{
                 padding: "1rem 2rem",
                 fontSize: "1rem",
-                backgroundColor: "#007bff",
+                backgroundColor: product.available ? "#3d6b8a" : "#c9ccd1",
                 color: "white",
                 border: "none",
                 borderRadius: "5px",
@@ -123,7 +129,7 @@ const Product = () => {
             </button>
             <h6 style={{ marginBottom: "1rem" }}>
               Stock Available :{" "}
-              <i style={{ color: "green", fontWeight: "bold" }}>
+              <i style={{ color: "#3f8f5f", fontWeight: "bold" }}>
                 {product.quantity}
               </i>
             </h6>
@@ -137,7 +143,7 @@ const Product = () => {
               style={{
                 padding: "1rem 2rem",
                 fontSize: "1rem",
-                backgroundColor: "#007bff",
+                backgroundColor: "#3d6b8a",
                 color: "white",
                 border: "none",
                 borderRadius: "5px",
@@ -154,7 +160,7 @@ const Product = () => {
               style={{
                 padding: "1rem 2rem",
                 fontSize: "1rem",
-                backgroundColor: "#dc3545",
+                backgroundColor: "#b3453f",
                 color: "white",
                 border: "none",
                 borderRadius: "5px",
